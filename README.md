@@ -22,6 +22,7 @@ First, build the Go container:
 
 To develop the App, modify [curl-app/main.go](https://github.com/DavidSantia/go-curl-static-docker/blob/master/curl-app/main.go) as needed, and test it with:
 ```sh
+go get github.com/andelf/go-curl
 go run curl-app/main.go
 ```
 
