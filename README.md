@@ -20,7 +20,7 @@ First, build the Go container:
 ./build-env.sh
 ```
 
-To develop the App, modify [curl-app/main.go](https://raw.githubusercontent.com/DavidSantia/curl-app/main.go) as needed, and test it with:
+To develop the App, modify [curl-app/main.go](https://raw.githubusercontent.com/DavidSantia/go-curl-static-docker/curl-app/main.go) as needed, and test it with:
 ```sh
 go run curl-app/main.go
 ```
@@ -56,7 +56,7 @@ I did not attempt to include LDAP, IDN or PSL support in Libcurl.  Expect the fo
 * configure: WARNING: Cannot find libraries for IDN support: IDN disabled
 * configure: WARNING: libpsl was not found
 
-The basic dependencies for libcurl are included, see the "apk add" step in [golang-libcurl/Dockerfile](https://raw.githubusercontent.com/DavidSantia/golang-libcurl/Dockerfile).
+The basic dependencies for libcurl are included, see the "apk add" step in [golang-libcurl/Dockerfile](https://raw.githubusercontent.com/DavidSantia/go-curl-static-docker/golang-libcurl/Dockerfile).
 
 You will also see these warnings:
 * /usr/include/sys/poll.h:1:2: warning: #warning redirecting incorrect #include <sys/poll.h> to <poll.h> [-Wcpp]
