@@ -52,7 +52,7 @@ The two images that are built are as follows:
 * **curl-app** is the container that deploys our sample curl app
 
 ### Notes
-I chose the [golang:alpine](https://hub.docker.com/r/_/golang/) docker image because Alpine Linux uses MUSL for its C compiler, which is designed for efficient static builds.
+I chose the [golang:alpine](https://hub.docker.com/r/_/golang/) docker image for a compile enviornment.  Alpine Linux uses MUSL for its C compiler, which is designed for efficient static builds.
 
 I did not attempt to include LDAP, IDN or PSL support in Libcurl.  Expect the following warnings:
 * configure: WARNING: Cannot find libraries for LDAP support: LDAP disabled
