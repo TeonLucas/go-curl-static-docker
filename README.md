@@ -48,7 +48,7 @@ curl-app                         latest              b929c571c29e        5 minut
 golang-libcurl                   latest              9ed651459978        19 minutes ago      421 MB
 ```
 The two images that are built are as follows:
-* **golang-libcurl** is the container for our build environement, which includes Go and our static libcurl.a
+* **golang-libcurl** is the container for compiling, which includes Go and our static libcurl.a
 * **curl-app** is the container that deploys our sample curl app
 
 ### Notes
