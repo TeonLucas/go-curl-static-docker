@@ -1,8 +1,10 @@
 # go-curl-static-docker
-Statically linked libcurl example in Go language, deployed in an empty docker container
+How to link Go with static C library, to deploy in an empty docker image
 
-## Static linking for small containers
-Go language is designed to readily build statically linked programs.  Such exectuables have no dependencies on the OS, and don't require the existance of any lib directories.  This is ideal for deploying a micro-service, resulting in smaller and more secure containers. Our sample App's Docker image is less than 6MB.
+## Static linking for "FROM scratch" containers
+Go language is designed to readily build statically linked programs.  Such exectuables have no dependencies on the OS, and don't require the existance of any lib directories, so can be deployed on an empty (FROM scratch) docker image.
+
+This is ideal for establishing a secure micro-service, it also results in a smaller container size which is more efficient for scaling. Our sample application's Docker image is less than 6MB.
 
 They easy way to link statically is to set the environment variable CGO_ENABLED=0 when building with Go.  However, there are times when you would like to use a C library, and thus cannot disable CGO.  You can still use C support in Go, and link with static libraries, as follows:
 ```sh
